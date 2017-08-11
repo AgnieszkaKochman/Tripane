@@ -1,0 +1,19 @@
+form {
+    width: 90%;
+    max-width: 900px;
+    min-height: 100px;
+    margin: -150px auto 150px auto;
+    padding: 30px 10px;
+    box-sizing: border-box;
+    background-color: #00796B;
+    border-radius: 3px;
+}
+
+input {
+    width: 22%;
+    margin: 0 1%;
+}
+
+button {
+    padding: 15px 55px;
+}

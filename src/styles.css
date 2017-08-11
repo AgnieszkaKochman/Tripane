@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700|Open+Sans:300,400,600,700&subset=latin-ext');
+/*
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+*/
+
+.tp-content {
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #212121;
+}
+
+p {
+    font-size: 1em;
+    color: #757575;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    text-align: center;
+}
+
+h1 { font-size: 2.5em; }
+h2 { font-size: 2em; }
+h3 { font-size: 1.75em; }
+h4 { font-size: 1.5em; }
+h5 { font-size: 1.25em; }
+h6 { font-size: 1em; }
+
+input {
+    height: 30px;
+    padding: 3px 8px;
+    border: 1px solid #BDBDBD;
+    border-radius: 3px;
+}
+
+button {
+    background-color: #FFC107;
+    border: 1px solid #FFC107;
+    border-radius: 3px;
+    cursor: pointer;
+    padding: 10px 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: background-color .25s, border .25s;
+}
+
+button:hover {
+    background-color: #cc9004;
+    border: 1px solid #cc9004;
+}
