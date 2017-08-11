@@ -9,7 +9,11 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var LoginPageComponent = (function () {
     function LoginPageComponent() {
-        this.name = 'Angular';
+        this.loginHeading = "Zaloguj się";
+        this.loginButton = "Zaloguj się";
+        this.registerHeadingSmall = "Nie masz jeszcze konta?";
+        this.registerHeading = "Zarejestruj się";
+        this.registerButton = "Zarejestruj się";
     }
     return LoginPageComponent;
 }());

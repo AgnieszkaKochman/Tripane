@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: [ './login-page.component.css' ]
 })
 export class LoginPageComponent { 
-  name = 'Angular'; 
+  loginHeading = "Zaloguj się";
+  loginButton = "Zaloguj się";
+  registerHeadingSmall = "Nie masz jeszcze konta?";
+  registerHeading = "Zarejestruj się";
+  registerButton = "Zarejestruj się";
 }
