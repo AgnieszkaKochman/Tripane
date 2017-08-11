@@ -1,0 +1,17 @@
+<div class="tp-content">
+    <h2>{{tripsHeading}}</h2>
+    <ul>
+        <li *ngFor="let trip of trips">
+            <img src="{{trip.photoUrl}}" alt="{{trip.title}}">
+            <div class="trip-info">
+                <h5>{{trip.title}}</h5>
+                <h6>{{trip.startDate | date : "dd.MM.yy" }} - {{trip.endDate | date : "dd.MM.yy" }}</h6>
+                <h6>{{trip.startPlace}} -> {{trip.destination}}</h6>
+            </div>
+            <div class="trip-info-button">
+                <h6>Zobacz szczegóły</h6>
+            </div>
+        </li>
+    </ul>
+    <button>Zobacz więcej wycieczek</button>
+</div>

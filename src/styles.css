@@ -16,6 +16,7 @@ body {
     font-size: 16px;
     line-height: 1.5;
     color: #212121;
+    background-color: #ffffff;
 }
 
 p {
@@ -48,7 +49,7 @@ button {
     border: 1px solid #FFC107;
     border-radius: 3px;
     cursor: pointer;
-    padding: 10px 15px;
+    padding: 15px 55px;
     font-weight: 700;
     text-transform: uppercase;
     transition: background-color .25s, border .25s;
@@ -57,4 +58,11 @@ button {
 button:hover {
     background-color: #cc9004;
     border: 1px solid #cc9004;
+}
+
+.content-wrapper {
+    z-index: 2; 
+    position: relative;
+    margin-bottom: 508px;
+    background-color: #ffffff;
 }

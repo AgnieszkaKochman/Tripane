@@ -1,0 +1,76 @@
+.tp-content {
+    padding-bottom: 80px;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 80px;
+}
+
+ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+ul li {
+    display: block;
+    width: 350px;
+    height: 350px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+
+li img {
+    position: absolute;
+    height: 100%;
+    width: auto;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.trip-info, .trip-info-button {
+    width: 280px;
+    height: 100px;
+    background-color: rgba(33, 33, 33, 0.8);
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    color: #FFFFFF;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.trip-info-button {
+    background-color: #FFC107;
+    color: #212121;
+    text-transform: uppercase;
+    font-family: 'Open Sans', sans-serif;
+    opacity: 0;
+    transition: opacity .25s;
+}
+
+li:hover .trip-info-button {
+    opacity: 1;
+}
+
+.trip-info-button h6 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.trip-info h5, .trip-info h6 {
+    font-family: 'Open Sans', sans-serif;
+    text-align: right;
+}
+
+.trip-info h6 {
+    font-weight: 300;
+}
+
+button {
+    margin: 80px auto 40px auto;
+}

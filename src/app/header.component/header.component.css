@@ -5,6 +5,7 @@ header {
     background-color: #00796B;
     position: fixed;
     top: 0;
+    z-index: 100;
 }
 
 nav {
