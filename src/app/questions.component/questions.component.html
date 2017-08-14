@@ -1,0 +1,9 @@
+<div class="tp-content">
+    <h2>{{questionsHeading}}</h2>
+    <ul>
+        <li *ngFor="let questionElement of questionsList">
+            <h6 class="tp-question">{{questionElement.id}}. {{questionElement.question}}</h6>
+            <p class="tp-answer">{{questionElement.answer}}</p>
+        </li>
+    </ul>
+</div>

@@ -1,0 +1,45 @@
+.tp-map, agm-map {
+    width: 100%;
+    height: 50vh;
+}
+
+.tp-map {
+    margin-top: 100px;
+    margin-bottom: 80px;
+}
+
+.tp-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-bottom: 50px;
+}
+
+.tp-column {
+    width: 50%;
+}
+
+.tp-image-wrapper {
+    width: 500px;
+    height: 500px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.tp-image-wrapper img {
+    height: 100%;
+    width: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+h2 {
+    margin-bottom: 40px;
+}
+
+p {
+    margin: 20px 0;
+}

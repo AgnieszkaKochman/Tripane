@@ -1,0 +1,49 @@
+.tp-content {
+    padding: 180px 0 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.tp-column {
+    width: 50%;
+}
+
+h2 {
+    margin-bottom: 30px;
+}
+
+p {
+    text-align: justify;
+}
+
+ul {
+    margin: 50px 0 0 10px;
+}
+
+li {
+    margin: 10px 0;
+}
+
+.tp-map {
+    margin-top: 80px;
+}
+
+.tp-map, agm-map {
+    height: 50vh;
+    width: 100%;
+}
+
+.fa {
+    margin-right: 10px;
+    font-size: 20px;
+    text-align: right;
+}
+
+.fa-map-marker {
+    margin-right: 19px;
+}
+
+.fa-phone {
+    margin-right: 14px;
+}

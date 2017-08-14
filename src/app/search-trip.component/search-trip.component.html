@@ -1,0 +1,44 @@
+<div class="tp-map">
+    <agm-map [latitude]="lat" [longitude]="lng">
+        <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+    </agm-map>
+</div>
+<div class="tp-content">
+    <form>
+        <input type="date" placeholder="Data rozpoczęcia">
+        <input type="date" placeholder="Data zakończenia">
+        <input type="text" placeholder="Miejsce startu">
+        <input type="text" placeholder="Cel wycieczki">
+        <input type="number" placeholder="Koszt min" class="tp-min">
+        <input type="number" placeholder="Koszt max">
+        <select class="tp-currency">
+            <option disabled selected>Waluta</option>
+            <option>zł</option>
+            <option>euro</option>
+        </select>
+        <select>
+            <option disabled selected>Transport</option>
+            <option>Pociąg</option>
+            <option>Samochód</option>
+            <option>Samolot</option>
+            <option>Autostop</option>
+            <option>Pieszo</option>
+        </select>
+        <select class="tp-accommodation">
+            <option disabled selected>Zakwaterowanie</option>
+            <option>Hotel</option>
+            <option>Namiot</option>
+            <option>Schronisko</option>
+            <option>Pensjonat</option>
+        </select>
+
+        <select class="tp-sort-by">
+            <option disabled selected>Sortuj po</option>
+            <option>Cena rosnąco</option>
+            <option>Cena malejąco</option>
+            <option>Czas trwania</option>
+        </select>
+        <button>Szukaj</button>
+    </form>
+</div>
+<trips></trips>

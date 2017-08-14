@@ -1,0 +1,21 @@
+<div class="tp-content">
+    <div class="tp-column">
+        <contact-form></contact-form>
+    </div>
+    <div class="tp-column">
+        <h2>Skontaktuj się z nami</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+        <ul>
+            <li><span class="fa fa-map-marker"></span>{{address}}</li>
+            <li><span class="fa fa-phone"></span>tel. {{phone}}</li>
+            <li><span class="fa fa-envelope"></span>{{email}}</li>
+        </ul>
+    </div>
+</div>
+<div class="tp-map">
+    <agm-map [latitude]="lat" [longitude]="lng" [minZoom]="15">
+        <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+    </agm-map>
+</div>

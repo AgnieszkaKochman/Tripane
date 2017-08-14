@@ -37,9 +37,16 @@ h4 { font-size: 1.5em; }
 h5 { font-size: 1.25em; }
 h6 { font-size: 1em; }
 
-input {
+input, select {
     height: 30px;
     padding: 3px 8px;
+    border: 1px solid #BDBDBD;
+    border-radius: 3px;
+}
+
+textarea {
+    height: 150px;
+    padding: 10px 8px;
     border: 1px solid #BDBDBD;
     border-radius: 3px;
 }

@@ -1,0 +1,1 @@
+{"version":3,"file":"single-trip-page.component.js","sourceRoot":"","sources":["single-trip-page.component.ts"],"names":[],"mappings":";;;;;;;;AAAA,sCAA0C;AAO1C,IAAa,uBAAuB;IAApC;IAEA,CAAC;IAAD,8BAAC;AAAD,CAAC,AAFD,IAEC;AAFY,uBAAuB;IALnC,gBAAS,CAAC;QACT,QAAQ,EAAE,kBAAkB;QAC5B,WAAW,EAAE,mCAAmC;QAChD,SAAS,EAAE,CAAE,kCAAkC,CAAE;KAClD,CAAC;GACW,uBAAuB,CAEnC;AAFY,0DAAuB"}
