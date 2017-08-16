@@ -1,8 +1,19 @@
 <footer>
     <div class="tp-content">
-        <div class="tp-column">{{column1}}</div>
-        <div class="tp-column">{{column2}}</div>
-        <div class="tp-column">{{column3}}</div>
+        <div class="tp-logo-wrapper">
+            <a routerLink="/home" alt="logo-tripane">
+                <img src="{{logoUrl}}">
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a routerLink="/home">Strona główna</a></li>
+                <li><a routerLink="/kontakt">Kontakt</a></li>
+                <li><a routerLink="/faq">FAQ</a></li>
+                <li><a routerLink="/login">Logowanie</a></li>
+                <li><a routerLink="/wycieczki">Wycieczki</a></li>
+            </ul>
+        </nav>
     </div>
-    <div class="copyright">{{copyright}} <a href="{{mondayUrl}}"><img src="{{mondayLogoUrl}}" alt="logo-monday"></a></div>
+    <div class="tp-copyright">{{copyright}} <a href="{{mondayUrl}}"><img src="{{mondayLogoUrl}}" alt="logo-monday"></a></div>
 </footer>

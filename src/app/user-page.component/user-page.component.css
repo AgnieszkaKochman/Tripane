@@ -1,0 +1,60 @@
+.tp-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 180px 0 50px 0;
+}
+
+.tp-column {
+    width: 50%;
+}
+
+.tp-image-wrapper {
+    width: 500px;
+    height: 500px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.tp-image-wrapper img {
+    height: 100%;
+    width: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.tp-message {
+    width: 100%;
+    margin: 50px 0;
+}
+
+input {
+    width: 49%;
+    box-sizing: border-box;
+}
+
+input[type="text"] {
+    float: left;
+}
+
+input[type="email"] {
+    float: right;
+}
+
+textarea {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 30px 0;
+}
+
+h2, h4 {
+    margin-bottom: 40px;
+    width: 100%;
+}
+
+p {
+    margin: 20px 0;
+}

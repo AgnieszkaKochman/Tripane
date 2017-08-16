@@ -1,3 +1,34 @@
 h4 {
     margin-bottom: 30px;
 }
+
+.tp-comments {
+    margin: 30px 0 50px 0;
+}
+
+.tp-user-photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    float: left;
+    margin-right: 30px;
+}
+
+.tp-user-photo img {
+    height: 100%;
+    width: auto;
+}
+
+.tp-comment {
+    width: 80%;
+    margin-left: 130px;
+    background-color: #B2DFDC;
+    box-sizing: border-box;
+    padding: 20px;
+    border-radius: 3px;
+}
+
+li {
+    margin: 30px 0;
+}

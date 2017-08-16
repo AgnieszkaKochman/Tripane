@@ -22,6 +22,7 @@ import { SingleTripComponent }      from './single-trip.component/single-trip.co
 import { CommentsSectionComponent } from './comments-section.component/comments-section.component';
 import { CommentsListComponent }    from './comments-list.component/comments-list.component';
 import { CommentFormComponent }     from './comment-form.component/comment-form.component';
+import { UserPageComponent }        from './user-page.component/user-page.component';
 
 @NgModule({
 imports:  [ BrowserModule,
@@ -33,7 +34,8 @@ imports:  [ BrowserModule,
               { path: 'dodaj-wycieczke', component: NewTripComponent },
               { path: 'faq', component: FAQComponent },
               { path: 'wycieczki', component: SearchTripComponent },
-              { path: 'wycieczka', component: SingleTripPageComponent }
+              { path: 'wycieczka', component: SingleTripPageComponent },
+              { path: 'user', component: UserPageComponent }
             ]),
             AgmCoreModule.forRoot({
               apiKey: 'AIzaSyDJLibd1hOmtwLauHA1VORvpVnz8FXWgd4'
@@ -57,7 +59,8 @@ imports:  [ BrowserModule,
                   SingleTripComponent,
                   CommentsSectionComponent,
                   CommentsListComponent,
-                  CommentFormComponent ],
+                  CommentFormComponent,
+                  UserPageComponent ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }

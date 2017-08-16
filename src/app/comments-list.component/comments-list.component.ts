@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
 
-
-
 @Component({
   selector: 'comments-list',
   templateUrl: './comments-list.component.html',

@@ -1,0 +1,21 @@
+<div class="tp-content">
+    <h2>{{user.name}} {{user.surname}}</h2>
+    <div class="tp-column">
+        <div class="tp-image-wrapper">
+            <img src="{{user.photoUrl}}" alt="{{user.login}}">
+        </div>
+    </div>
+    <div class="tp-column">
+        <p>{{user.description}}</p>
+        <p>{{user.birthDate | date : "dd.MM.yy" }}</p>
+        <p>{{user.phone}}</p>
+    </div>
+
+    <div class="tp-message">
+        <h4>Napisz wiadomość</h4>
+        <input type="text" placeholder="Imię i nazwisko">
+        <input type="email" placeholder="Email">
+        <textarea>Wiadomość</textarea>
+        <button>Wyślij</button>
+    </div>
+</div>

@@ -29,6 +29,7 @@ var single_trip_component_1 = require("./single-trip.component/single-trip.compo
 var comments_section_component_1 = require("./comments-section.component/comments-section.component");
 var comments_list_component_1 = require("./comments-list.component/comments-list.component");
 var comment_form_component_1 = require("./comment-form.component/comment-form.component");
+var user_page_component_1 = require("./user-page.component/user-page.component");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -45,7 +46,8 @@ AppModule = __decorate([
                 { path: 'dodaj-wycieczke', component: new_trip_component_1.NewTripComponent },
                 { path: 'faq', component: faq_component_1.FAQComponent },
                 { path: 'wycieczki', component: search_trip_component_1.SearchTripComponent },
-                { path: 'wycieczka', component: single_trip_page_component_1.SingleTripPageComponent }
+                { path: 'wycieczka', component: single_trip_page_component_1.SingleTripPageComponent },
+                { path: 'user', component: user_page_component_1.UserPageComponent }
             ]),
             core_2.AgmCoreModule.forRoot({
                 apiKey: 'AIzaSyDJLibd1hOmtwLauHA1VORvpVnz8FXWgd4'
@@ -69,7 +71,8 @@ AppModule = __decorate([
             single_trip_component_1.SingleTripComponent,
             comments_section_component_1.CommentsSectionComponent,
             comments_list_component_1.CommentsListComponent,
-            comment_form_component_1.CommentFormComponent],
+            comment_form_component_1.CommentFormComponent,
+            user_page_component_1.UserPageComponent],
         bootstrap: [app_component_1.AppComponent]
     })
 ], AppModule);
