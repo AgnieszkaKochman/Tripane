@@ -32,3 +32,17 @@ h4 {
 li {
     margin: 30px 0;
 }
+
+
+
+@media screen and (max-width: 968px) {
+    .tp-comment {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 530px) {
+    .tp-comment {
+        width: 57%;
+    }
+}

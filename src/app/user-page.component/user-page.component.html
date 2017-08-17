@@ -1,11 +1,11 @@
 <div class="tp-content">
     <h2>{{user.name}} {{user.surname}}</h2>
-    <div class="tp-column">
+    <div class="tp-column tp-image-column">
         <div class="tp-image-wrapper">
             <img src="{{user.photoUrl}}" alt="{{user.login}}">
         </div>
     </div>
-    <div class="tp-column">
+    <div class="tp-column tp-description-column">
         <p>{{user.description}}</p>
         <p>{{user.birthDate | date : "dd.MM.yy" }}</p>
         <p>{{user.phone}}</p>

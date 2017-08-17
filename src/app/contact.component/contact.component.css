@@ -7,6 +7,15 @@
 
 .tp-column {
     width: 50%;
+    box-sizing: border-box;
+}
+
+.tp-contact-form-column {
+    order: 1;
+}
+
+.tp-contact-info-column {
+    order: 2;
 }
 
 h2 {
@@ -38,6 +47,7 @@ li {
     margin-right: 10px;
     font-size: 20px;
     text-align: right;
+    color: #00796B;
 }
 
 .fa-map-marker {
@@ -46,4 +56,36 @@ li {
 
 .fa-phone {
     margin-right: 14px;
+}
+
+a {
+    text-decoration: none;
+    color: #00796B;
+    font-weight: 600;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+@media screen and (max-width: 1200px) {
+    .tp-column {
+        padding: 0 20px;
+    }
+}
+
+@media screen and (max-width: 968px) {
+    .tp-column {
+        width: 100%;
+    }
+
+    .tp-contact-form-column {
+        order: 2;
+    }
+
+    .tp-contact-info-column {
+        order: 1;
+        margin-bottom: 50px;
+    }
 }

@@ -5,12 +5,12 @@
 </div>
 <h2>{{trip.title}}</h2>
 <div class="tp-content">
-    <div class="tp-column">
+    <div class="tp-column tp-image-column">
         <div class="tp-image-wrapper">
             <img src="{{trip.photoUrl}}" alt="{{trip.title}}">
         </div>
     </div>
-    <div class="tp-column">
+    <div class="tp-column tp-description-column">
         <p>{{trip.description}}</p>
         <p>{{trip.startDate | date : "dd.MM.yy" }} - {{trip.endDate | date : "dd.MM.yy" }}</p>
         <p>{{trip.startPlace}} -> {{trip.destination}}</p>

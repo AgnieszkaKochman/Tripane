@@ -19,6 +19,14 @@
     width: 50%;
 }
 
+.tp-image-column {
+    order: 1;
+}
+
+.tp-description-column {
+    order: 2;
+}
+
 .tp-image-wrapper {
     width: 500px;
     height: 500px;
@@ -42,4 +50,27 @@ h2 {
 
 p {
     margin: 20px 0;
+}
+
+
+@media screen and (max-width: 1100px) {
+    .tp-column {
+        width: 100%;
+    }
+
+    .tp-image-column {
+        order: 2;
+    }
+
+    .tp-description-column {
+        order: 1;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .tp-image-wrapper {
+        width: 300px;
+        height: 300px;
+    }
 }

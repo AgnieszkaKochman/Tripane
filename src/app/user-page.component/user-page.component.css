@@ -9,6 +9,14 @@
     width: 50%;
 }
 
+.tp-image-column {
+    order: 1;
+}
+
+.tp-description-column {
+    order: 2;
+}
+
 .tp-image-wrapper {
     width: 500px;
     height: 500px;
@@ -29,6 +37,7 @@
 .tp-message {
     width: 100%;
     margin: 50px 0;
+    order: 3;
 }
 
 input {
@@ -57,4 +66,32 @@ h2, h4 {
 
 p {
     margin: 20px 0;
+}
+
+
+
+@media screen and (max-width: 1100px) {
+    .tp-column {
+        width: 100%;
+    }
+
+    .tp-image-column {
+        order: 2;
+    }
+
+    .tp-description-column {
+        order: 1;
+        text-align: center;
+    }
+
+    .tp-message {
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 530px) {
+    .tp-image-wrapper {
+        width: 300px;
+        height: 300px;
+    }
 }

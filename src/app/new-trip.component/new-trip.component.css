@@ -10,18 +10,19 @@ form {
 input, textarea, select {
     margin: 10px 0;
     box-sizing: border-box;
+    width: 100%;   
 }
 
-input[type="text"], input[type="file"], textarea {
-    width: 100%;
-}
-
-input[type="date"], input[type="number"], select {
+label[for="trip-new-start"], label[for="trip-new-end"], label[for="trip-new-price"], label[for="trip-new-currency"], 
+label[for="trip-new-transport"], label[for="trip-new-accommodation"] {
     width: 49%;
+}
+
+label[for="trip-new-start"], label[for="trip-new-price"], label[for="trip-new-transport"] {
     float: left;
 }
 
-input[type="date"]:nth-child(even) {
+label[for="trip-new-accommodation"], label[for="trip-new-end"], label[for="trip-new-currency"]  {
     float: right;
 }
 
@@ -31,4 +32,12 @@ select:nth-child(odd) {
 
 button {
     margin-top: 30px;
+}
+
+
+
+@media screen and (max-width: 768px) {
+    label {
+        width: 100% !important;
+    }
 }

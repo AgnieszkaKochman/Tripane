@@ -5,32 +5,41 @@
 </div>
 <div class="tp-content">
     <form>
-        <input type="date" placeholder="Data rozpoczęcia">
-        <input type="date" placeholder="Data zakończenia">
-        <input type="text" placeholder="Miejsce startu">
-        <input type="text" placeholder="Cel wycieczki">
-        <input type="number" placeholder="Koszt min" class="tp-min">
-        <input type="number" placeholder="Koszt max">
-        <select class="tp-currency">
+        <label for="trip-new-start">Data rozpoczęcia
+        <input id="trip-new-start" type="date" placeholder="Data rozpoczęcia"></label>
+        <label for="trip-new-end">Data zakończenia
+        <input id="trip-new-end" type="date" placeholder="Data zakończenia"></label>
+        <label for="trip-new-startplace">Miejsce startu
+        <input id="trip-new-startplace" type="text" placeholder="Miejsce startu"></label>
+        <label for="trip-new-destination">Cel wycieczki
+        <input id="trip-new-destination" type="text" placeholder="Cel wycieczki"></label>
+        <label for="trip-new-price-min">Koszt wycieczki (minimum)
+        <input id="trip-new-price-min" type="number" placeholder="Koszt min" class="tp-min"></label>
+        <label for="trip-new-price-max">Koszt wycieczki (maksimum)
+        <input id="trip-new-price-max" type="number" placeholder="Koszt max"></label>
+        <label for="trip-new-currency" class="tp-currency">Waluta
+        <select id="trip-new-currency">
             <option disabled selected>Waluta</option>
             <option>zł</option>
             <option>euro</option>
-        </select>
-        <select>
+        </select></label>
+        <label for="trip-new-transport">Transport
+        <select id="trip-new-transport">
             <option disabled selected>Transport</option>
             <option>Pociąg</option>
             <option>Samochód</option>
             <option>Samolot</option>
             <option>Autostop</option>
             <option>Pieszo</option>
-        </select>
-        <select class="tp-accommodation">
+        </select></label>
+        <label for="trip-new-accommodation">Zakwaterowanie
+        <select id="trip-new-accommodation" class="tp-accommodation">
             <option disabled selected>Zakwaterowanie</option>
             <option>Hotel</option>
             <option>Namiot</option>
             <option>Schronisko</option>
             <option>Pensjonat</option>
-        </select>
+        </select></label>
 
         <select class="tp-sort-by">
             <option disabled selected>Sortuj po</option>
