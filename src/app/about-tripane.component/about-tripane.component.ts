@@ -6,10 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: [ './about-tripane.component.css' ]
 })
 export class AboutTripaneComponent { 
-  title = "Co to jest Tripane?"  
-  description = `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`;
+  title = "Dołącz do Tripane!"  
+  description = `Znasz to uczucie, kiedy chcesz gdzieś jechać, ale nie masz z kim? Pewnie zastanawiasz się, czy jest więcej osób, które mają ten problem...
+                A co gdyby połączyć wszytkie osoby, które szukają kompanów na wspólny wyjazd? Teraz to proste! 
+                Poznawaj nowe osoby, odkrywaj wspaniałe miejsca i dziel koszty podróży!`;
   registerTxt = "Zarejestruj się już teraz!";
 }

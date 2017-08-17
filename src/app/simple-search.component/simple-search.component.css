@@ -3,13 +3,50 @@ form {
     max-width: 900px;
     min-height: 100px;
     margin: -150px auto 150px auto;
-    padding: 30px 10px;
+    padding: 17px 10px;
     box-sizing: border-box;
     background-color: #00796B;
     border-radius: 3px;
 }
-
-input {
+ 
+label {
     width: 22%;
     margin: 0 1%;
+    position: relative;
+    display: block;
+    float: left;
+    color: #ffffff;
+    font-weight: 300;
+}
+
+input {
+    width: 100%;
+    margin-top: 5px;
+}
+
+button {
+    margin: 17px 10px -10px 10px;
+}
+
+
+
+@media screen and (max-width: 768px) {
+    label {
+        width: 50%;
+        margin: 0 auto;
+    }
+
+    label[for="simple-search_from"], label[for="simple-search_to"] {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 460px) {
+    label {
+        width: 100%;
+    }
+
+    button {
+        margin-left: 0;
+    }
 }

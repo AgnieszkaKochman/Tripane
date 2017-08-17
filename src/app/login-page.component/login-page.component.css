@@ -38,3 +38,18 @@ input {
 button {
     margin-top: 20px;
 }
+
+
+
+@media screen and (max-width: 968px) {
+    .tp-column {
+        width: 100%;
+        margin-bottom: 40px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    form {
+        width: 100%;
+    }
+}

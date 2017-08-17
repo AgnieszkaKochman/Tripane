@@ -1,7 +1,7 @@
 <div class="tp-content">
     <h2>{{tripsHeading}}</h2>
     <ul>
-        <li *ngFor="let trip of trips">
+        <li *ngFor="let trip of trips" routerLink="/wycieczka">
             <img src="{{trip.photoUrl}}" alt="{{trip.title}}">
             <div class="trip-info">
                 <h5>{{trip.title}}</h5>

@@ -9,8 +9,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var AboutTripaneComponent = (function () {
     function AboutTripaneComponent() {
-        this.title = "Co to jest Tripane?";
-        this.description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\n                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.\n                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
+        this.title = "Dołącz do Tripane!";
+        this.description = "Znasz to uczucie, kiedy chcesz gdzie\u015B jecha\u0107, ale nie masz z kim? Pewnie zastanawiasz si\u0119, czy jest wi\u0119cej os\u00F3b, kt\u00F3re maj\u0105 ten problem...\n                A co gdyby po\u0142\u0105czy\u0107 wszytkie osoby, kt\u00F3re szukaj\u0105 kompan\u00F3w na wsp\u00F3lny wyjazd? Teraz to proste! \n                Poznawaj nowe osoby, odkrywaj wspania\u0142e miejsca i dziel koszty podr\u00F3\u017Cy!";
         this.registerTxt = "Zarejestruj się już teraz!";
     }
     return AboutTripaneComponent;

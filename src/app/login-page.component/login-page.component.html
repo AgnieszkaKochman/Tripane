@@ -3,8 +3,8 @@
         <div class="login-form-wrapper">
             <h3>{{loginHeading}}</h3>
             <form>
-                <input type="text" placeholder="Login">
-                <input type="password" placeholder="Hasło">
+                <input type="text" placeholder="Login" required>
+                <input type="password" placeholder="Hasło" required>
                 <button>{{loginButton}}</button>
             </form>
         </div>
@@ -14,12 +14,13 @@
             <h6>{{registerHeadingSmall}}</h6>
             <h3>{{registerHeading}}</h3>
             <form>
-                <input type="text" placeholder="Imię">
-                <input type="text" placeholder="Nazwisko">
-                <input type="email" placeholder="Email">
-                <input type="text" placeholder="Login">
-                <input type="password" placeholder="Hasło">
-                <input type="password" placeholder="Powtórz hasło">
+                <input type="text" placeholder="Imię" required>
+                <input type="text" placeholder="Nazwisko" required>
+                <input type="email" placeholder="Email" required>
+                <input type="text" placeholder="Login" required>
+                <input type="password" placeholder="Hasło" required>
+                <input type="password" placeholder="Powtórz hasło" required>
+                <input type="text" placeholder="Phone">
                 <button>{{registerButton}}</button>
             </form>
         </div>

@@ -38,10 +38,11 @@ h5 { font-size: 1.25em; }
 h6 { font-size: 1em; }
 
 input, select {
-    height: 30px;
+    height: 36px;
     padding: 3px 8px;
     border: 1px solid #BDBDBD;
     border-radius: 3px;
+    box-sizing: border-box;
 }
 
 textarea {
