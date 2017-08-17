@@ -30,7 +30,7 @@ li img {
     transform: translateX(-50%);
 }
 
-.trip-info, .trip-info-button {
+.trip-info {
     width: 280px;
     height: 100px;
     background-color: rgba(33, 33, 33, 0.8);
@@ -40,15 +40,44 @@ li img {
     color: #FFFFFF;
     box-sizing: border-box;
     padding: 10px;
+
+    transition: width .35s, height .35s, right .35s, bottom .35s, padding .35s;
 }
 
-.trip-info-button {
-    background-color: #FFC107;
-    color: #212121;
-    text-transform: uppercase;
-    font-family: 'Open Sans', sans-serif;
-    opacity: 0;
-    transition: opacity .25s;
+.trip-info:before, .trip-info:after {
+    content: "";
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    height: 0px;
+    width: 0px;
+    color: #fff;
+        
+    transition: width .40s, height .40s;
+}
+
+.trip-info:before {
+    border-bottom: 1px solid #ffffff;
+}
+
+.trip-info:after {
+    border-left: 1px solid #ffffff;
+}
+
+li:hover .trip-info {
+    width: 350px;
+    height: 350px;
+    right: 0;
+    bottom: 0;
+    padding: 30px;
+}
+
+li:hover .trip-info:before {
+    width: 290px;
+}
+
+li:hover .trip-info:after {
+    height: 290px;
 }
 
 li:hover .trip-info-button {
