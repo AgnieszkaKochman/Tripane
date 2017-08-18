@@ -26,7 +26,7 @@ var UserPageComponent = (function () {
             phone: "123-456-789",
             birthDate: new Date(1987, 10, 28),
             photoUrl: "assets/images/user.jpg",
-            description: "Lorem ipsum dolor sit amet"
+            description: "Aenean faucibus risus a hendrerit bibendum. Morbi lectus magna, faucibus et maximus ac, ultricies ut mauris. Fusce eu fringilla diam, eu porta lectus. In condimentum est nec nisi pretium molestie. Aenean laoreet nunc at pellentesque finibus."
         };
     }
     return UserPageComponent;

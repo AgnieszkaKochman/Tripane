@@ -11,9 +11,39 @@
         </div>
     </div>
     <div class="tp-column tp-description-column">
-        <p>{{trip.description}}</p>
-        <p>{{trip.startDate | date : "dd.MM.yy" }} - {{trip.endDate | date : "dd.MM.yy" }}</p>
-        <p>{{trip.startPlace}} -> {{trip.destination}}</p>
-        <p>{{trip.priceAmount}}{{trip.priceCurrency}}</p>
+        <h5><span class="fa fa-pencil-square-o"></span>Opis</h5>
+        <p class="tp-trip-description">{{trip.description}}</p>
+        <div class="tp-small-column">
+            <h6><span class="fa fa-calendar"></span>Data wyjazdu</h6>
+            <p>{{trip.startDate | date : "dd.MM.yyyy" }}</p>
+        </div>
+        <div class="tp-small-column">
+            <h6><span class="fa fa-calendar"></span>Data powrotu</h6>
+            <p>{{trip.endDate | date : "dd.MM.yyyy" }}</p>  
+        </div>
+        <div class="tp-small-column">
+            <h6><span class="fa fa-map-marker"></span>Miejsce startu</h6>
+            <p>{{trip.startPlace}}</p>
+        </div>
+        <div class="tp-small-column">
+            <h6><span class="fa fa-map-marker"></span>Cel podróży</h6>
+            <p>{{trip.destination}}</p>
+        </div>
+        <div class="tp-small-column">
+            <h6><span class="fa fa-plane"></span>Transport</h6>
+            <p>{{transport}}</p>
+        </div>
+        <div class="tp-small-column">
+            <h6><span class="fa fa-home"></span>Zakwaterowanie</h6>
+            <p>{{accommodation}}</p>
+        </div>
+        <div class="tp-small-column">
+            <h6><span class="fa fa-money"></span>Koszt</h6>
+            <p>{{trip.priceAmount}}{{trip.priceCurrency}}</p>
+        </div>
+        <div class="tp-small-column">
+            <h6><span class="fa fa-user"></span>Autor</h6>
+            <p>{{user}}</p>
+        </div>
     </div>
 </div>

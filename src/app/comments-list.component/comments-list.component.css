@@ -13,6 +13,7 @@ h4 {
     overflow: hidden;
     float: left;
     margin-right: 30px;
+    margin-left: 20px;
 }
 
 .tp-user-photo img {
@@ -27,6 +28,15 @@ h4 {
     box-sizing: border-box;
     padding: 20px;
     border-radius: 3px;
+}
+
+.tp-comment-info {
+    font-size: 0.9em;
+    font-style: italic;
+}
+
+.tp-comment-info span {
+    font-weight: 600;
 }
 
 li {

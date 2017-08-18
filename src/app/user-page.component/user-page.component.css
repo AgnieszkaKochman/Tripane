@@ -64,8 +64,21 @@ h2, h4 {
     width: 100%;
 }
 
+h5, h6 {
+    text-align: left;
+}
+
 p {
-    margin: 20px 0;
+    margin: 10px 0 20px 0;
+}
+
+.tp-user-description {
+    text-align: justify;
+}
+
+.fa {
+    padding-right: 10px;
+    color: #00796B;
 }
 
 
@@ -81,7 +94,8 @@ p {
 
     .tp-description-column {
         order: 1;
-        text-align: center;
+        text-align: left;
+        padding: 0 20px;
     }
 
     .tp-message {

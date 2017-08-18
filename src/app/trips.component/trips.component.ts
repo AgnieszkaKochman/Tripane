@@ -24,7 +24,7 @@ const TRIPS: Trip[] = [
         priceAmount: 1200, 
         priceCurrency: "zł", 
         photoUrl: "./assets/trips/paris.jpeg", 
-        description: "Wycieczka do Paryża w październiku"
+        description: "Wycieczka do Paryża w październiku. Integer id purus eu purus congue sodales. Morbi eu urna mollis, lobortis tortor eu, gravida enim. Fusce augue purus, lobortis sit amet urna iaculis, dignissim sodales lectus. Nam elementum enim nec lobortis placerat. In hac habitasse platea dictumst."
     },
     { 
         tripId: 2, 
@@ -36,7 +36,7 @@ const TRIPS: Trip[] = [
         priceAmount: 3200, 
         priceCurrency: "zł", 
         photoUrl: "./assets/trips/kair.jpeg", 
-        description: "Wycieczka do Egiptu w listopadzie"
+        description: "Wycieczka do Egiptu w listopadzie. Integer id purus eu purus congue sodales. Morbi eu urna mollis, lobortis tortor eu, gravida enim. Fusce augue purus, lobortis sit amet urna iaculis, dignissim sodales lectus. Nam elementum enim nec lobortis placerat. In hac habitasse platea dictumst."
     },
     { 
         tripId: 3, 
@@ -48,7 +48,7 @@ const TRIPS: Trip[] = [
         priceAmount: 8200, 
         priceCurrency: "zł", 
         photoUrl: "./assets/trips/chicago.jpeg", 
-        description: "Wycieczka do USA w marcu"
+        description: "Wycieczka do USA w marcu. Integer id purus eu purus congue sodales. Morbi eu urna mollis, lobortis tortor eu, gravida enim. Fusce augue purus, lobortis sit amet urna iaculis, dignissim sodales lectus. Nam elementum enim nec lobortis placerat. In hac habitasse platea dictumst."
     }
   ];
 

@@ -27,8 +27,11 @@ var SingleTripComponent = (function () {
             priceAmount: 1200,
             priceCurrency: "zł",
             photoUrl: "./assets/trips/paris.jpeg",
-            description: "Wycieczka do Paryża w październiku"
+            description: "Wycieczka do Paryża w październiku. Integer id purus eu purus congue sodales. Morbi eu urna mollis, lobortis tortor eu, gravida enim. Fusce augue purus, lobortis sit amet urna iaculis, dignissim sodales lectus. Nam elementum enim nec lobortis placerat. In hac habitasse platea dictumst."
         };
+        this.transport = "Autokar";
+        this.accommodation = "Hotel";
+        this.user = "Anna Kowalska";
     }
     return SingleTripComponent;
 }());

@@ -6,9 +6,14 @@
         </div>
     </div>
     <div class="tp-column tp-description-column">
-        <p>{{user.description}}</p>
-        <p>{{user.birthDate | date : "dd.MM.yy" }}</p>
+        <h5><span class="fa fa-pencil-square-o"></span>Opis</h5>
+        <p class="tp-user-description">{{user.description}}</p>
+        <h6><span class="fa fa-calendar"></span>Data urodzenia</h6>
+        <p>{{user.birthDate | date : "dd.MM.yyyy" }}</p>
+        <h6><span class="fa fa-phone"></span>Telefon</h6>
         <p>{{user.phone}}</p>
+        <h6><span class="fa fa-envelope"></span>Email</h6>
+        <p>{{user.email}}</p>
     </div>
 
     <div class="tp-message">
