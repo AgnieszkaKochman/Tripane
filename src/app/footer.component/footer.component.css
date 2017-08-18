@@ -54,3 +54,12 @@ li a {
 li a:hover {
     color: #FFC107;
 }
+
+
+
+@media screen and (max-width: 768px) {
+    li {
+        width: 100%;
+        margin: 10px 0 !important;
+    }
+}

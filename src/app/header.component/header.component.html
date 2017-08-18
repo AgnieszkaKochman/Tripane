@@ -3,11 +3,23 @@
         <a routerLink="/home" alt="logo-tripane">
             <img src="{{logoUrl}}">
         </a>
-        <nav>
+        <nav class="tp-desktop-menu">
+            <ul>
+                <li><a routerLink="/dodaj-wycieczke">{{addTripTxt}}</a></li>
+                <li><a routerLink="/login">{{loginTxt}}</a></li>
+            </ul>
+        </nav>
+
+        <div class="tp-menu-button" (click)="toggleOpen($event)" [ngClass]="{'tp-change-menu-button': isMenuOpen}">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav class="tp-mobile-menu" [ngClass]="{'tp-show-menu': isMenuOpen}">
             <ul>
                 <li><a routerLink="/dodaj-wycieczke">{{addTripTxt}}</a></li>
                 <li><a routerLink="/login">{{loginTxt}}</a></li>
             </ul>
         </nav>
     </div>
-</header>
+</header> 

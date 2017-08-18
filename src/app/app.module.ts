@@ -23,6 +23,8 @@ import { CommentsSectionComponent } from './comments-section.component/comments-
 import { CommentsListComponent }    from './comments-list.component/comments-list.component';
 import { CommentFormComponent }     from './comment-form.component/comment-form.component';
 import { UserPageComponent }        from './user-page.component/user-page.component';
+import { AccordionGroupComponent }  from './accordion-group.component/accordion-group.component';
+import { AccordionComponent }       from './accordion.component/accordion.component';
 
 @NgModule({
 imports:  [ BrowserModule,
@@ -60,7 +62,9 @@ imports:  [ BrowserModule,
                   CommentsSectionComponent,
                   CommentsListComponent,
                   CommentFormComponent,
-                  UserPageComponent ],
+                  UserPageComponent,
+                  AccordionGroupComponent,
+                  AccordionComponent ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'page-header',
@@ -9,4 +9,11 @@ export class HeaderComponent {
   logoUrl = "./assets/images/logo.png";
   addTripTxt = "+ Dodaj wycieczkę";
   loginTxt= "Zaloguj się / Zarejestruj się";
+
+  isMenuOpen = false;
+
+  toggleOpen(event: MouseEvent): void {
+    event.preventDefault();
+    this.isMenuOpen = !this.isMenuOpen;
+  }
 }

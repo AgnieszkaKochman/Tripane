@@ -30,6 +30,8 @@ var comments_section_component_1 = require("./comments-section.component/comment
 var comments_list_component_1 = require("./comments-list.component/comments-list.component");
 var comment_form_component_1 = require("./comment-form.component/comment-form.component");
 var user_page_component_1 = require("./user-page.component/user-page.component");
+var accordion_group_component_1 = require("./accordion-group.component/accordion-group.component");
+var accordion_component_1 = require("./accordion.component/accordion.component");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -72,7 +74,9 @@ AppModule = __decorate([
             comments_section_component_1.CommentsSectionComponent,
             comments_list_component_1.CommentsListComponent,
             comment_form_component_1.CommentFormComponent,
-            user_page_component_1.UserPageComponent],
+            user_page_component_1.UserPageComponent,
+            accordion_group_component_1.AccordionGroupComponent,
+            accordion_component_1.AccordionComponent],
         bootstrap: [app_component_1.AppComponent]
     })
 ], AppModule);

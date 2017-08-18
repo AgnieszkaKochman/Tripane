@@ -1,0 +1,15 @@
+<div class="panel panel-default" [ngClass]="{'panel-open': isOpen}">
+    <div class="panel-heading" (click)="toggleOpen($event)">
+        <a href tabindex="0" class="panel-title-a">
+            <span class="fa fa-angle-down"></span><span class="fa fa-angle-up"></span>
+            <h6 class="panel-title">
+                <span>{{heading}}</span>
+            </h6>
+        </a>
+    </div>
+    <div class="panel-collapse" [hidden]="!isOpen">
+    <div class="panel-body">
+        <ng-content></ng-content>
+    </div>
+    </div>
+</div>

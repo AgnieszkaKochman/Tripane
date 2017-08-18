@@ -12,7 +12,12 @@ var HeaderComponent = (function () {
         this.logoUrl = "./assets/images/logo.png";
         this.addTripTxt = "+ Dodaj wycieczkę";
         this.loginTxt = "Zaloguj się / Zarejestruj się";
+        this.isMenuOpen = false;
     }
+    HeaderComponent.prototype.toggleOpen = function (event) {
+        event.preventDefault();
+        this.isMenuOpen = !this.isMenuOpen;
+    };
     return HeaderComponent;
 }());
 HeaderComponent = __decorate([
