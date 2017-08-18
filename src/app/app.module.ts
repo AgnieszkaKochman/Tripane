@@ -2,6 +2,8 @@ import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule }  from '@angular/router';
 import { AgmCoreModule } from '@agm/core';
+import { FormsModule }   from '@angular/forms';
+import { HttpModule }    from '@angular/http';
 
 import { AppComponent }             from './app.component';
 import { HeaderComponent }          from './header.component/header.component';
@@ -28,6 +30,8 @@ import { AccordionComponent }       from './accordion.component/accordion.compon
 
 @NgModule({
 imports:  [ BrowserModule,
+            FormsModule,
+            HttpModule,
             RouterModule.forRoot([
               { path: '', redirectTo: '/home', pathMatch: 'full' },
               { path: 'home', component: HomeComponent },

@@ -10,6 +10,8 @@ var core_1 = require("@angular/core");
 var platform_browser_1 = require("@angular/platform-browser");
 var router_1 = require("@angular/router");
 var core_2 = require("@agm/core");
+var forms_1 = require("@angular/forms");
+var http_1 = require("@angular/http");
 var app_component_1 = require("./app.component");
 var header_component_1 = require("./header.component/header.component");
 var footer_component_1 = require("./footer.component/footer.component");
@@ -40,6 +42,8 @@ var AppModule = (function () {
 AppModule = __decorate([
     core_1.NgModule({
         imports: [platform_browser_1.BrowserModule,
+            forms_1.FormsModule,
+            http_1.HttpModule,
             router_1.RouterModule.forRoot([
                 { path: '', redirectTo: '/home', pathMatch: 'full' },
                 { path: 'home', component: home_component_1.HomeComponent },

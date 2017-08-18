@@ -1,7 +1,7 @@
 <form>
-    <input type="text" placeholder="Imię i nazwisko" required>
-    <input type="email" placeholder="Email" required>
-    <input type="text" placeholder="Temat" required>
-    <textarea placeholder="Wiadomość"></textarea>
-    <button>Wyślij</button>
+    <input type="text" name="name" placeholder="Imię i nazwisko" required [(ngModel)]="newMessage.name">
+    <input type="email" name="email" placeholder="Email" required [(ngModel)]="newMessage.email">
+    <input type="text" name="subject" placeholder="Temat" required [(ngModel)]="newMessage.subject">
+    <textarea name="message" placeholder="Wiadomość" [(ngModel)]="newMessage.message"></textarea>
+    <button (click)="onSubmit()">Wyślij</button>
 </form>
