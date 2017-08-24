@@ -1,7 +1,19 @@
-<form>
-    <input type="text" name="name" placeholder="Imię i nazwisko" required [(ngModel)]="newMessage.name">
-    <input type="email" name="email" placeholder="Email" required [(ngModel)]="newMessage.email">
-    <input type="text" name="subject" placeholder="Temat" required [(ngModel)]="newMessage.subject">
-    <textarea name="message" placeholder="Wiadomość" [(ngModel)]="newMessage.message"></textarea>
-    <button (click)="onSubmit()">Wyślij</button>
-</form>
+<form name="contactForm" [formGroup]="contactForm" (ngSubmit)="onSubmit(contactForm)">
+    <label>
+        <input formControlName="cfName" type="text" name="name" placeholder="Imię i nazwisko" required>
+        <p id="cfName-error" class="errorMessage">Niepoprawne imię</p>
+    </label>
+    <label>
+        <input formControlName="cfEmail" type="email" name="email" placeholder="Email" required>
+        <p id="cfEmail-error" class="errorMessage">Niepoprawne imię</p>
+    </label>
+    <label>
+        <input formControlName="cfSubject" type="text" name="subject" placeholder="Temat" required>
+        <p id="cfSubject-error" class="errorMessage">Niepoprawne imię</p>
+    </label>
+    <label>
+        <textarea formControlName="cfMessage" name="message" placeholder="Wiadomość"></textarea>
+        <p id="cfMessage-error" class="errorMessage">Niepoprawne imię</p>
+    </label>
+    <button type="submit">Wyślij</button>
+</form> 

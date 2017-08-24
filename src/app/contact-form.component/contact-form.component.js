@@ -10,26 +10,29 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
-var http_1 = require("@angular/http");
+var forms_1 = require("@angular/forms");
+var router_1 = require("@angular/router");
+var check_form_service_1 = require("../check-form.service/check-form.service");
 var ContactFormComponent = (function () {
-    function ContactFormComponent(http) {
-        this.http = http;
-        this.newMessage = {
-            name: '',
-            email: '',
-            subject: '',
-            message: ''
-        };
+    function ContactFormComponent(checkFormService, formBuilder, router) {
+        this.checkFormService = checkFormService;
+        this.formBuilder = formBuilder;
+        this.router = router;
+        this.invalidName = false;
+        this.invalidEmail = false;
+        this.invalidSubject = false;
+        this.invalidMessage = false;
     }
     ;
-    ContactFormComponent.prototype.onSubmit = function () {
-        var headers = new http_1.Headers();
-        headers.append('Content-Type', 'application/X-www-form-urlencoded');
-        this.http.post('./app/send-email.php', this.newMessage, { headers: headers }).subscribe(function (data) {
-            if (data.json().success) {
-                console.log('mail sent');
-            }
+    ContactFormComponent.prototype.ngOnInit = function () {
+        this.contactForm = this.formBuilder.group({
+            cfName: '',
+            cfEmail: '',
+            cfSubject: '',
+            cfMessage: ''
         });
+    };
+    ContactFormComponent.prototype.onSubmit = function () {
     };
     return ContactFormComponent;
 }());
@@ -37,9 +40,10 @@ ContactFormComponent = __decorate([
     core_1.Component({
         selector: 'contact-form',
         templateUrl: './contact-form.component.html',
-        styleUrls: ['./contact-form.component.css']
+        styleUrls: ['./contact-form.component.css'],
+        providers: [check_form_service_1.CheckFormService]
     }),
-    __metadata("design:paramtypes", [http_1.Http])
+    __metadata("design:paramtypes", [check_form_service_1.CheckFormService, forms_1.FormBuilder, router_1.Router])
 ], ContactFormComponent);
 exports.ContactFormComponent = ContactFormComponent;
 //# sourceMappingURL=contact-form.component.js.map

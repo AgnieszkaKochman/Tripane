@@ -1,5 +1,5 @@
 <h4>Dodaj komentarz</h4>
 <form>
-    <textarea>Komentarz</textarea>
-    <button>Dodaj</button>
+    <textarea #comment>Komentarz</textarea>
+    <button (click)="onSubmit(comment.value)">Dodaj</button>
 </form>

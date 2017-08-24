@@ -18,9 +18,13 @@
 
     <div class="tp-message">
         <h4>Napisz wiadomość</h4>
-        <input type="text" placeholder="Imię i nazwisko">
-        <input type="email" placeholder="Email">
-        <textarea>Wiadomość</textarea>
-        <button>Wyślij</button>
+        <input #name type="text" placeholder="Imię i nazwisko">
+        <input #email type="email" placeholder="Email">
+        <textarea #message>Wiadomość</textarea>
+        <button (click)="onSubmit(
+            name.value,
+            email.value,
+            message.value
+        )">Wyślij</button>
     </div>
 </div>

@@ -28,7 +28,20 @@ var UserPageComponent = (function () {
             photoUrl: "assets/images/user.jpg",
             description: "Aenean faucibus risus a hendrerit bibendum. Morbi lectus magna, faucibus et maximus ac, ultricies ut mauris. Fusce eu fringilla diam, eu porta lectus. In condimentum est nec nisi pretium molestie. Aenean laoreet nunc at pellentesque finibus."
         };
+        this.messageInfo = {
+            name: '',
+            email: '',
+            message: ''
+        };
     }
+    UserPageComponent.prototype.onSubmit = function (name, email, message) {
+        this.messageInfo.name = name;
+        this.messageInfo.email = email;
+        this.messageInfo.message = message;
+        console.log("Imię i nazwisko: " + this.messageInfo.name);
+        console.log("Email: " + this.messageInfo.email);
+        console.log("Wiadomość: " + this.messageInfo.message);
+    };
     return UserPageComponent;
 }());
 UserPageComponent = __decorate([

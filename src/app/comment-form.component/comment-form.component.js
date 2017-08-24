@@ -9,7 +9,12 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var CommentFormComponent = (function () {
     function CommentFormComponent() {
+        this.comment = "";
     }
+    CommentFormComponent.prototype.onSubmit = function (comment) {
+        this.comment = comment;
+        console.log("Komentarz: " + this.comment);
+    };
     return CommentFormComponent;
 }());
 CommentFormComponent = __decorate([

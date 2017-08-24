@@ -2,10 +2,16 @@
     <div class="tp-column">
         <div class="login-form-wrapper">
             <h3>{{loginHeading}}</h3>
-            <form>
-                <input type="text" placeholder="Login" required>
-                <input type="password" placeholder="Hasło" required>
-                <button>{{loginButton}}</button>
+            <form name="userLoginInfo" [formGroup]="userLoginInfo" (ngSubmit)="onLogin(userLoginInfo)">
+                <label>
+                    <input formControlName="lfLogin" type="text" placeholder="Login" (blur)="checkLfLogin()" required>
+                    <p id="lfLogin-error" class="errorMessage">Niepoprawny login</p>
+                </label>
+                <label>
+                    <input formControlName="lfPassword" type="password" placeholder="Hasło" (blur)="checkLfPassword()" required>
+                    <p id="lfPassword-error" class="errorMessage">Niepoprawne hasło</p>
+                </label>
+                <button type="submit">{{loginButton}}</button>
             </form>
         </div>
     </div>
@@ -13,15 +19,37 @@
         <div class="register-form-wrapper">
             <h6>{{registerHeadingSmall}}</h6>
             <h3>{{registerHeading}}</h3>
-            <form>
-                <input type="text" placeholder="Imię" required>
-                <input type="text" placeholder="Nazwisko" required>
-                <input type="email" placeholder="Email" required>
-                <input type="text" placeholder="Login" required>
-                <input type="password" placeholder="Hasło" required>
-                <input type="password" placeholder="Powtórz hasło" required>
-                <input type="text" placeholder="Phone">
-                <button>{{registerButton}}</button>
+            <form name="userRegisterInfo" [formGroup]="userRegisterInfo" (ngSubmit)="onRegister(userRegisterInfo)">
+                <label>
+                    <input formControlName="rfName" type="text" placeholder="Imię" (blur)="checkRfName()" required>
+                    <p id="rfName-error" class="errorMessage">Niepoprawne imię</p>
+                </label>
+                <label>
+                    <input formControlName="rfSurname" type="text" placeholder="Nazwisko" (blur)="checkRfSurname()" required>
+                    <p id="rfSurname-error" class="errorMessage">Niepoprawne nazwisko</p>
+                </label>
+                <label>
+                    <input formControlName="rfEmail" type="email" placeholder="Email" (blur)="checkRfEmail()" required>
+                    <p id="rfEmail-error" class="errorMessage">Niepoprawny email</p>
+                </label>
+                <label>
+                    <input formControlName="rfLogin" type="text" placeholder="Login" (blur)="checkRfLogin()" required>
+                    <p id="rfLogin-error" class="errorMessage">Niepoprawny login</p>
+                </label>
+                <label>
+                    <input formControlName="rfPassword" type="password" placeholder="Hasło" (blur)="checkRfPassword()" required>
+                    <p id="rfPassword-error" class="errorMessage">Niepoprawne hasło</p>
+                </label>
+                <label>
+                    <input formControlName="rfConfirmPassword" type="password" placeholder="Powtórz hasło" (blur)="checkRfConfirmPassword()" required>
+                    <p id="rfConfirmPassword-error" class="errorMessage">Niepoprawne hasło</p>
+                </label>
+                <label>
+                    <input formControlName="rfPhone" type="text" placeholder="Phone" (blur)="checkRfPhone()">
+                    <p id="rfPhone-error" class="errorMessage">Niepoprawny numer telefonu</p>
+                    <p style="font-size: 0.8em;">Format: 111222333 lub 111-222-333 lub 111 222 333</p>
+                </label>
+                <button type="submit">{{registerButton}}</button>
             </form>
         </div>
     </div>

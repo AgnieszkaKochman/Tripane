@@ -1,10 +1,15 @@
-<form>
+<form name="searchInfo" [formGroup]="searchInfo" (ngSubmit)="onSubmit(searchInfo)">
     <label for="simple-search_place">Miejsce
-    <input id="simple-search_place" type="text" placeholder="Miejsce..."></label>
+    <input formControlName="destination" id="simple-search_place" name="destination" type="text" placeholder="Miejsce..." (blur)="checkDestination()">
+    <p id="destination-error" class="errorMessage">Niepoprawny tekst</p></label>
     <label for="simple-search_from">Od
-    <input id="simple-search_from" type="date" placeholder="Od..."></label>
+    <input formControlName="startDate" id="simple-search_from" name="startDate" type="date" placeholder="yyyy-mm-dd" (blur)="checkStartDate()">
+    <p id="start-date-error" class="errorMessage">Niepoprawny format daty</p></label>
     <label for="simple-search_to">Do
-    <input id="simple-search_to" type="date" placeholder="Do..."></label>
+    <input formControlName="endDate" id="simple-search_to" name="endDate" type="date" placeholder="yyyy-mm-dd" (blur)="checkEndDate()">
+    <p id="end-date-error" class="errorMessage">Niepoprawny format daty</p></label>
 
-    <button routerLink="/wycieczki">Szukaj</button>
-</form> 
+    <button type="submit">Szukaj</button>
+</form>  
+<!-- routerLink="/wycieczki"
+ (click)="onSubmit(destination.value, startDate.value, endDate.value)">-->

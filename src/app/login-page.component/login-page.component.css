@@ -39,6 +39,10 @@ button {
     margin-top: 20px;
 }
 
+label {
+    position: relative;
+    padding: 10px 0;
+}
 
 
 @media screen and (max-width: 968px) {

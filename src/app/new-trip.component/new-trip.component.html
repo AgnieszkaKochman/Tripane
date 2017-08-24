@@ -1,30 +1,30 @@
 <div class="tp-content">
     <h2>{{addTripHeading}}</h2>
-    <form>
+    <form> 
         <label for="trip-new-name">Nazwa wycieczki
-        <input id="trip-new-name" type="text" placeholder="Nazwa wycieczki"></label>
+        <input #tripName id="trip-new-name" type="text" placeholder="Nazwa wycieczki" name="name" required ([ngModel])="newTrip.name"></label>
         <label for="trip-new-description">Opis wycieczki
-        <textarea id="trip-new-description" placeholder="Opis"></textarea></label>
+        <textarea #tripDescription id="trip-new-description" placeholder="Opis"></textarea></label>
         <label for="trip-new-photo">Dodaj zdjęcie
-        <input id="trip-new-photo" type="file" placeholder="Dodaj zdjęcie"></label>
+        <input #tripPhoto id="trip-new-photo" type="file" placeholder="Dodaj zdjęcie"></label>
         <label for="trip-new-start">Data rozpoczęcia
-        <input id="trip-new-start" type="date" placeholder="Data rozpoczęcia"></label>
+        <input #tripStartDate id="trip-new-start" type="date" placeholder="Data rozpoczęcia"></label>
         <label for="trip-new-end">Data zakończenia
-        <input id="trip-new-end" type="date" placeholder="Data zakończenia"></label>
+        <input #tripEndDate id="trip-new-end" type="date" placeholder="Data zakończenia"></label>
         <label for="trip-new-startplace">Miejsce startu
-        <input id="trip-new-startplace" type="text" placeholder="Miejsce startu"></label>
+        <input #tripStartPlace id="trip-new-startplace" type="text" placeholder="Miejsce startu"></label>
         <label for="trip-new-destination">Cel wycieczki
-        <input id="trip-new-destination" type="text" placeholder="Cel wycieczki"></label>
+        <input #tripDestination id="trip-new-destination" type="text" placeholder="Cel wycieczki"></label>
         <label for="trip-new-price">Koszt wycieczki
-        <input id="trip-new-price" type="number" placeholder="Koszt wycieczki"></label>
+        <input #tripPrice id="trip-new-price" type="number" placeholder="Koszt wycieczki"></label>
         <label for="trip-new-currency">Waluta
-        <select id="trip-new-currency">
+        <select #tripCurrency id="trip-new-currency">
             <option disabled selected>Waluta</option>
             <option>zł</option>
             <option>euro</option>
         </select></label>
         <label for="trip-new-transport">Transport
-        <select id="trip-new-transport">
+        <select #tripTransport id="trip-new-transport">
             <option disabled selected>Transport</option>
             <option>Pociąg</option>
             <option>Samochód</option>
@@ -33,13 +33,24 @@
             <option>Pieszo</option>
         </select></label>
         <label for="trip-new-accommodation">Zakwaterowanie
-        <select id="trip-new-accommodation">
+        <select #tripAccommodation id="trip-new-accommodation">
             <option disabled selected>Zakwaterowanie</option>
             <option>Hotel</option>
             <option>Namiot</option>
             <option>Schronisko</option>
             <option>Pensjonat</option>
         </select></label>
-        <button>Zapisz</button>
+        <button (click)="onSubmit(
+            tripName.value,
+            tripDescription.value,
+            tripPhoto.value,
+            tripStartDate.value,
+            tripEndDate.value,
+            tripStartPlace.value,
+            tripDestination.value,
+            tripPrice.value,
+            tripCurrency.value,
+            tripTransport.value,
+            tripAccommodation.value )">Zapisz</button>
     </form>
 </div>

@@ -33,4 +33,21 @@ export class UserPageComponent {
       photoUrl: "assets/images/user.jpg",
       description: "Aenean faucibus risus a hendrerit bibendum. Morbi lectus magna, faucibus et maximus ac, ultricies ut mauris. Fusce eu fringilla diam, eu porta lectus. In condimentum est nec nisi pretium molestie. Aenean laoreet nunc at pellentesque finibus."
   }
+
+  messageInfo = {
+    name: '',
+    email: '',
+    message: ''
+  }
+
+
+  onSubmit(name: string, email: string, message: string) {
+    this.messageInfo.name    = name;
+    this.messageInfo.email   = email;
+    this.messageInfo.message = message;
+
+    console.log("Imię i nazwisko: " + this.messageInfo.name);
+    console.log("Email: "           + this.messageInfo.email);
+    console.log("Wiadomość: "       + this.messageInfo.message);
+  }
 }
