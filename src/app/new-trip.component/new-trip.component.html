@@ -1,56 +1,67 @@
-<div class="tp-content">
+<div class="tp-content"> 
     <h2>{{addTripHeading}}</h2>
-    <form> 
+    <form name="newTripInfo" [formGroup]="newTripInfo" (ngSubmit)="onSubmit(newTripInfo)"> 
         <label for="trip-new-name">Nazwa wycieczki
-        <input #tripName id="trip-new-name" type="text" placeholder="Nazwa wycieczki" name="name" required ([ngModel])="newTrip.name"></label>
+            <input formControlName="tripName" id="trip-new-name" type="text" placeholder="Nazwa wycieczki" name="name" (blur)="checkName()" required>
+            <p id="tripName-error" class="errorMessage">Niepoprawna nazwa</p>
+        </label>
         <label for="trip-new-description">Opis wycieczki
-        <textarea #tripDescription id="trip-new-description" placeholder="Opis"></textarea></label>
+            <textarea formControlName="tripDescription" id="trip-new-description" placeholder="Opis" (blur)="checkDescription()"></textarea>
+            <p id="tripDescription-error" class="errorMessage">Niepoprawny opis</p>
+        </label>
         <label for="trip-new-photo">Dodaj zdjęcie
-        <input #tripPhoto id="trip-new-photo" type="file" placeholder="Dodaj zdjęcie"></label>
+            <input formControlName="tripPhoto" id="trip-new-photo" type="file" placeholder="Dodaj zdjęcie" (blur)="checkPhoto()">
+            <p id="tripPhoto-error" class="errorMessage">Brak zdjęcia</p>
+        </label>
         <label for="trip-new-start">Data rozpoczęcia
-        <input #tripStartDate id="trip-new-start" type="date" placeholder="Data rozpoczęcia"></label>
+            <input formControlName="tripStartDate" id="trip-new-start" type="date" placeholder="Data rozpoczęcia" (blur)="checkStartDate()">
+            <p id="tripStartDate-error" class="errorMessage">Niepoprawna data</p>
+        </label>
         <label for="trip-new-end">Data zakończenia
-        <input #tripEndDate id="trip-new-end" type="date" placeholder="Data zakończenia"></label>
+            <input formControlName="tripEndDate" id="trip-new-end" type="date" placeholder="Data zakończenia" (blur)="checkEndDate()">
+            <p id="tripEndDate-error" class="errorMessage">Niepoprawna data</p>
+        </label>
         <label for="trip-new-startplace">Miejsce startu
-        <input #tripStartPlace id="trip-new-startplace" type="text" placeholder="Miejsce startu"></label>
+            <input formControlName="tripStartPlace" id="trip-new-startplace" type="text" placeholder="Miejsce startu" (blur)="checkStartPlace()">
+            <p id="tripStartPlace-error" class="errorMessage">Niepoprawna nazwa</p>
+        </label>
         <label for="trip-new-destination">Cel wycieczki
-        <input #tripDestination id="trip-new-destination" type="text" placeholder="Cel wycieczki"></label>
+            <input formControlName="tripDestination" id="trip-new-destination" type="text" placeholder="Cel wycieczki" (blur)="checkDestination()">
+            <p id="tripDestination-error" class="errorMessage">Niepoprawna nazwa</p>
+        </label>
         <label for="trip-new-price">Koszt wycieczki
-        <input #tripPrice id="trip-new-price" type="number" placeholder="Koszt wycieczki"></label>
+            <input formControlName="tripPrice" id="trip-new-price" type="number" placeholder="Koszt wycieczki" (blur)="checkPrice()">
+            <p id="tripPrice-error" class="errorMessage">Niepoprawna cena</p>
+        </label>
         <label for="trip-new-currency">Waluta
-        <select #tripCurrency id="trip-new-currency">
-            <option disabled selected>Waluta</option>
-            <option>zł</option>
-            <option>euro</option>
-        </select></label>
+            <select formControlName="tripCurrency" id="trip-new-currency" (blur)="checkCurrency()">
+                <option disabled selected>Waluta</option>
+                <option>zł</option>
+                <option>euro</option>
+            </select>
+            <p id="tripCurrency-error" class="errorMessage errorMessage-select">Wybierz walutę</p>
+        </label>
         <label for="trip-new-transport">Transport
-        <select #tripTransport id="trip-new-transport">
-            <option disabled selected>Transport</option>
-            <option>Pociąg</option>
-            <option>Samochód</option>
-            <option>Samolot</option>
-            <option>Autostop</option>
-            <option>Pieszo</option>
-        </select></label>
+            <select formControlName="tripTransport" id="trip-new-transport" (blur)="checkTransport()">
+                <option disabled selected>Transport</option>
+                <option>Pociąg</option>
+                <option>Samochód</option>
+                <option>Samolot</option>
+                <option>Autostop</option>
+                <option>Pieszo</option>
+            </select>
+            <p id="tripTransport-error" class="errorMessage errorMessage-select">Wybierz transport</p>
+        </label>
         <label for="trip-new-accommodation">Zakwaterowanie
-        <select #tripAccommodation id="trip-new-accommodation">
-            <option disabled selected>Zakwaterowanie</option>
-            <option>Hotel</option>
-            <option>Namiot</option>
-            <option>Schronisko</option>
-            <option>Pensjonat</option>
-        </select></label>
-        <button (click)="onSubmit(
-            tripName.value,
-            tripDescription.value,
-            tripPhoto.value,
-            tripStartDate.value,
-            tripEndDate.value,
-            tripStartPlace.value,
-            tripDestination.value,
-            tripPrice.value,
-            tripCurrency.value,
-            tripTransport.value,
-            tripAccommodation.value )">Zapisz</button>
+            <select formControlName="tripAccommodation" id="trip-new-accommodation" (blur)="checkAccommodation()">
+                <option disabled selected>Zakwaterowanie</option>
+                <option>Hotel</option>
+                <option>Namiot</option>
+                <option>Schronisko</option>
+                <option>Pensjonat</option>
+            </select>
+            <p id="tripAccommodation-error" class="errorMessage errorMessage-select">Wybierz zakwaterowanie</p>
+        </label>
+        <button type="submit">Zapisz</button>
     </form>
-</div>
+</div> 

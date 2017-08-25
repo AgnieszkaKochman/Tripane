@@ -70,80 +70,88 @@ var LoginPageComponent = (function () {
             this.router.navigate(['./home']);
         }
     };
-    LoginPageComponent.prototype.checkLoginPassword = function (form, field, fieldControl) {
-        if (!this.checkFormService.checkLoginPassword(form, field)) {
-            this.showErrorMessage(field, fieldControl);
+    LoginPageComponent.prototype.checkString = function (form, field) {
+        if (!this.checkFormService.checkString(form, field)) {
+            this.showErrorMessage(field);
+            return true;
         }
         else {
-            this.hideErrorMessage(field, fieldControl);
+            this.hideErrorMessage(field);
+            return false;
         }
     };
-    LoginPageComponent.prototype.checkText = function (form, field, fieldControl) {
+    LoginPageComponent.prototype.checkText = function (form, field) {
         if (!this.checkFormService.checkText(form.get(field).value)) {
-            this.showErrorMessage(field, fieldControl);
+            this.showErrorMessage(field);
+            return true;
         }
         else {
-            this.hideErrorMessage(field, fieldControl);
+            this.hideErrorMessage(field);
+            return false;
         }
     };
-    LoginPageComponent.prototype.checkEmail = function (form, field, fieldControl) {
+    LoginPageComponent.prototype.checkEmail = function (form, field) {
         if (!this.checkFormService.checkEmail(form, field)) {
-            this.showErrorMessage(field, fieldControl);
+            this.showErrorMessage(field);
+            return true;
         }
         else {
-            this.hideErrorMessage(field, fieldControl);
+            this.hideErrorMessage(field);
+            return false;
         }
     };
-    LoginPageComponent.prototype.checkPassword = function (form, field1, field2, fieldControl) {
+    LoginPageComponent.prototype.checkPassword = function (form, field1, field2) {
         if (!this.checkFormService.checkPassword(form, field1, field2)) {
-            this.showErrorMessage(field2, fieldControl);
+            this.showErrorMessage(field2);
+            return true;
         }
         else {
-            this.hideErrorMessage(field2, fieldControl);
+            this.hideErrorMessage(field2);
+            return false;
         }
     };
-    LoginPageComponent.prototype.checkPhone = function (form, field, fieldControl) {
+    LoginPageComponent.prototype.checkPhone = function (form, field) {
         if (!this.checkFormService.checkPhone(form, field)) {
-            this.showErrorMessage(field, fieldControl);
+            this.showErrorMessage(field);
+            return true;
         }
         else {
-            this.hideErrorMessage(field, fieldControl);
+            this.hideErrorMessage(field);
+            return false;
         }
     };
-    LoginPageComponent.prototype.showErrorMessage = function (field, fieldControl) {
-        fieldControl = true;
+    LoginPageComponent.prototype.showErrorMessage = function (field) {
         document.getElementById(field + '-error').style.display = "block";
     };
-    LoginPageComponent.prototype.hideErrorMessage = function (field, fieldControl) {
-        fieldControl = false;
+    LoginPageComponent.prototype.hideErrorMessage = function (field) {
         document.getElementById(field + '-error').style.display = "none";
     };
     LoginPageComponent.prototype.checkLfLogin = function () {
-        this.checkLoginPassword(this.userLoginInfo, 'lfLogin', this.invalidLoginFormLogin);
+        this.invalidLoginFormLogin = this.checkString(this.userLoginInfo, 'lfLogin');
     };
     LoginPageComponent.prototype.checkLfPassword = function () {
-        this.checkLoginPassword(this.userLoginInfo, 'lfPassword', this.invalidLoginFormPassword);
+        this.invalidLoginFormPassword = this.checkString(this.userLoginInfo, 'lfPassword');
     };
     LoginPageComponent.prototype.checkRfName = function () {
-        this.checkText(this.userRegisterInfo, 'rfName', this.invalidRegisterFormName);
+        this.invalidRegisterFormName = this.checkText(this.userRegisterInfo, 'rfName');
     };
     LoginPageComponent.prototype.checkRfSurname = function () {
-        this.checkText(this.userRegisterInfo, 'rfSurname', this.invalidRegisterFormSurname);
+        this.invalidRegisterFormSurname = this.checkText(this.userRegisterInfo, 'rfSurname');
     };
     LoginPageComponent.prototype.checkRfEmail = function () {
-        this.checkEmail(this.userRegisterInfo, 'rfEmail', this.invalidRegisterFormEmail);
+        this.invalidRegisterFormEmail = this.checkEmail(this.userRegisterInfo, 'rfEmail');
     };
     LoginPageComponent.prototype.checkRfLogin = function () {
-        this.checkLoginPassword(this.userRegisterInfo, 'rfLogin', this.invalidRegisterFormLogin);
+        this.invalidRegisterFormLogin = this.checkString(this.userRegisterInfo, 'rfLogin');
     };
     LoginPageComponent.prototype.checkRfPassword = function () {
-        this.checkLoginPassword(this.userRegisterInfo, 'rfPassword', this.invalidRegisterFormPassword);
+        this.invalidRegisterFormPassword = this.checkString(this.userRegisterInfo, 'rfPassword');
     };
     LoginPageComponent.prototype.checkRfConfirmPassword = function () {
-        this.checkPassword(this.userRegisterInfo, 'rfPassword', 'rfConfirmPassword', this.invalidRegisterFormConfirmPassword);
+        this.invalidRegisterFormConfirmPassword = this.checkPassword(this.userRegisterInfo, 'rfPassword', 'rfConfirmPassword');
     };
     LoginPageComponent.prototype.checkRfPhone = function () {
-        this.checkPhone(this.userRegisterInfo, 'rfPhone', this.invalidRegisterFormPhone);
+        this.invalidRegisterFormPhone = this.checkPhone(this.userRegisterInfo, 'rfPhone');
     };
     return LoginPageComponent;
 }());

@@ -56,7 +56,7 @@ var CheckFormService = (function () {
             return false;
         return true;
     };
-    CheckFormService.prototype.checkLoginPassword = function (form, field) {
+    CheckFormService.prototype.checkString = function (form, field) {
         if (form.get(field).value.length < 6)
             return false;
         return true;
@@ -93,6 +93,35 @@ var CheckFormService = (function () {
         var phoneNumber = form.get(field).value.replace(/[^\d]/g, '');
         var otherCharacters = form.get(field).value.replace(/[0-9]/g, '');
         if (phoneNumber.length !== 9 || (otherCharacters != "--" && otherCharacters != "" && otherCharacters != "  "))
+            return false;
+        return true;
+    };
+    CheckFormService.prototype.checkPhoto = function (field) {
+        /*
+
+        // empty file
+        if ( !field || field.length < 6 ) return false;
+
+        let fileExtension = field.slice(field.length - 4, field.length);
+
+        if (fileExtension !== ".png" && fileExtension !== ".jpg" && fileExtension !== '.bmp') {
+            fileExtension = field.slice(field.length - 5, field.length);
+            if (fileExtension !== ".jpeg") return false;
+        }*/
+        return true;
+    };
+    CheckFormService.prototype.checkPrice = function (field) {
+        // empty price or price is not a number
+        if (!field)
+            return false;
+        // price < 0
+        if (field < 0)
+            return false;
+        return true;
+    };
+    CheckFormService.prototype.checkSelect = function (field) {
+        // empty select
+        if (!field || field.length < 1)
             return false;
         return true;
     };

@@ -4,61 +4,70 @@
     </agm-map>
 </div>
 <div class="tp-content">
-    <form>
+    <form name="searchTripInfo" [formGroup]="searchTripInfo" (ngSubmit)="onSearch(searchTripInfo)">
         <label for="trip-new-start">Data rozpoczęcia
-        <input #startDate id="trip-new-start" type="date" placeholder="Data rozpoczęcia"></label>
+            <input formControlName="startDate" id="trip-new-start" type="date" placeholder="Data rozpoczęcia" (blur)="checkStartDate()">
+            <p id="startDate-error" class="errorMessage">Niepoprawna data</p>
+        </label>
         <label for="trip-new-end">Data zakończenia
-        <input #endDate id="trip-new-end" type="date" placeholder="Data zakończenia"></label>
+            <input formControlName="endDate" id="trip-new-end" type="date" placeholder="Data zakończenia" (blur)="checkEndDate()">
+            <p id="endDate-error" class="errorMessage">Niepoprawna data</p>
+        </label>
         <label for="trip-new-startplace">Miejsce startu
-        <input #startPlace id="trip-new-startplace" type="text" placeholder="Miejsce startu"></label>
+            <input formControlName="startPlace" id="trip-new-startplace" type="text" placeholder="Miejsce startu" (blur)="checkStartPlace()">
+            <p id="startPlace-error" class="errorMessage">Niepoprawna nazwa</p>
+        </label>
         <label for="trip-new-destination">Cel wycieczki
-        <input #destination id="trip-new-destination" type="text" placeholder="Cel wycieczki"></label>
+            <input formControlName="destination" id="trip-new-destination" type="text" placeholder="Cel wycieczki" (blur)="checkDestination()">
+            <p id="destination-error" class="errorMessage">Niepoprawna nazwa</p>
+        </label>
         <label for="trip-new-price-min">Koszt wycieczki (minimum)
-        <input #minPrice id="trip-new-price-min" type="number" placeholder="Koszt min" class="tp-min"></label>
+            <input formControlName="minPrice" id="trip-new-price-min" type="number" placeholder="Koszt min" class="tp-min" (blur)="checkMinPrice()">
+            <p id="minPrice-error" class="errorMessage">Niepoprawny koszt</p>
+        </label>
         <label for="trip-new-price-max">Koszt wycieczki (maksimum)
-        <input #maxPrice id="trip-new-price-max" type="number" placeholder="Koszt max"></label>
+            <input formControlName="maxPrice" id="trip-new-price-max" type="number" placeholder="Koszt max" (blur)="checkMaxPrice()">
+            <p id="maxPrice-error" class="errorMessage">Niepoprawny koszt</p>
+        </label>
         <label for="trip-new-currency" class="tp-currency">Waluta
-        <select #currency id="trip-new-currency">
-            <option disabled selected>Waluta</option>
-            <option>zł</option>
-            <option>euro</option>
-        </select></label>
+            <select formControlName="currency" id="trip-new-currency" (blur)="checkCurrency()">
+                <option disabled selected>Waluta</option>
+                <option>zł</option>
+                <option>euro</option>
+            </select>
+            <p id="currency-error" class="errorMessage">Wybierz walutę</p>
+        </label>
         <label for="trip-new-transport">Transport
-        <select #transport id="trip-new-transport">
-            <option disabled selected>Transport</option>
-            <option>Pociąg</option>
-            <option>Samochód</option>
-            <option>Samolot</option>
-            <option>Autostop</option>
-            <option>Pieszo</option>
-        </select></label>
+            <select formControlName="transport" id="trip-new-transport" (blur)="checkTransport()">
+                <option disabled selected>Transport</option>
+                <option>Pociąg</option>
+                <option>Samochód</option>
+                <option>Samolot</option>
+                <option>Autostop</option>
+                <option>Pieszo</option>
+            </select>
+            <p id="transport-error" class="errorMessage">Wybierz transport</p>
+        </label>
         <label for="trip-new-accommodation">Zakwaterowanie
-        <select #accommodation id="trip-new-accommodation" class="tp-accommodation">
-            <option disabled selected>Zakwaterowanie</option>
-            <option>Hotel</option>
-            <option>Namiot</option>
-            <option>Schronisko</option>
-            <option>Pensjonat</option>
-        </select></label>
+            <select formControlName="accommodation" id="trip-new-accommodation" class="tp-accommodation" (blur)="checkAccommodation()">
+                <option disabled selected>Zakwaterowanie</option>
+                <option>Hotel</option>
+                <option>Namiot</option>
+                <option>Schronisko</option>
+                <option>Pensjonat</option>
+            </select>
+            <p id="accommodation-error" class="errorMessage">Wybierz zakwaterowanie</p>
+        </label>
 
-        <select #sort class="tp-sort-by">
-            <option disabled selected>Sortuj po</option>
-            <option>Cena rosnąco</option>
-            <option>Cena malejąco</option>
-            <option>Czas trwania</option>
-        </select>
-        <button (click)="onSearch(
-            startDate.value, 
-            endDate.value, 
-            startPlace.value, 
-            destination.value, 
-            minPrice.value, 
-            maxPrice.value, 
-            currency.value, 
-            transport.value, 
-            accommodation.value, 
-            sort.value
-            )">Szukaj</button>
+        <label for="trip-sort" class="tp-sort-by">Sortuj po
+            <select formControlName="sort" id="trip-sort">
+                <option disabled selected>Sortuj po</option>
+                <option>Cena rosnąco</option>
+                <option>Cena malejąco</option>
+                <option>Czas trwania</option>
+            </select>
+        </label>
+        <button type="submit">Szukaj</button>
     </form>
 </div>
 <trips></trips>

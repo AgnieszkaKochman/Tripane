@@ -33,6 +33,59 @@ var ContactFormComponent = (function () {
         });
     };
     ContactFormComponent.prototype.onSubmit = function () {
+        this.checkCfName();
+        this.checkCfEmail();
+        this.checkCfSubject();
+        this.checkCfMessage();
+        if (!this.invalidName && !this.invalidEmail && !this.invalidSubject && !this.invalidMessage) {
+            console.log("Contact form OK!");
+        }
+    };
+    ContactFormComponent.prototype.checkCfName = function () {
+        if (!this.checkFormService.checkText(this.contactForm.get('cfName').value)) {
+            this.showErrorMessage('cfName', this.invalidName);
+            this.invalidName = true;
+        }
+        else {
+            this.hideErrorMessage('cfName', this.invalidName);
+            this.invalidName = false;
+        }
+    };
+    ContactFormComponent.prototype.checkCfEmail = function () {
+        if (!this.checkFormService.checkEmail(this.contactForm, 'cfEmail')) {
+            this.showErrorMessage('cfEmail', this.invalidEmail);
+            this.invalidEmail = true;
+        }
+        else {
+            this.hideErrorMessage('cfEmail', this.invalidEmail);
+            this.invalidEmail = false;
+        }
+    };
+    ContactFormComponent.prototype.checkCfSubject = function () {
+        if (!this.checkFormService.checkString(this.contactForm, 'cfSubject')) {
+            this.showErrorMessage('cfSubject', this.invalidSubject);
+            this.invalidSubject = true;
+        }
+        else {
+            this.hideErrorMessage('cfSubject', this.invalidSubject);
+            this.invalidSubject = false;
+        }
+    };
+    ContactFormComponent.prototype.checkCfMessage = function () {
+        if (!this.checkFormService.checkString(this.contactForm, 'cfMessage')) {
+            this.showErrorMessage('cfMessage', this.invalidMessage);
+            this.invalidMessage = true;
+        }
+        else {
+            this.hideErrorMessage('cfMessage', this.invalidMessage);
+            this.invalidMessage = false;
+        }
+    };
+    ContactFormComponent.prototype.showErrorMessage = function (field, fieldControl) {
+        document.getElementById(field + '-error').style.display = "block";
+    };
+    ContactFormComponent.prototype.hideErrorMessage = function (field, fieldControl) {
+        document.getElementById(field + '-error').style.display = "none";
     };
     return ContactFormComponent;
 }());

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { FormGroup } from '@angular/forms';
-
+ 
 @Injectable()
 export class CheckFormService {
 
@@ -44,7 +44,7 @@ export class CheckFormService {
         return true;
     }
 
-    checkLoginPassword(form: FormGroup, field: string): boolean {
+    checkString(form: FormGroup, field: string): boolean {
         if (form.get(field).value.length < 6) return false;
         
         return true;
@@ -88,4 +88,39 @@ export class CheckFormService {
 
         return true;
     }
+
+    checkPhoto(field: string): boolean {
+        /*
+
+        // empty file
+        if ( !field || field.length < 6 ) return false;
+
+        let fileExtension = field.slice(field.length - 4, field.length);
+
+        if (fileExtension !== ".png" && fileExtension !== ".jpg" && fileExtension !== '.bmp') {
+            fileExtension = field.slice(field.length - 5, field.length);
+            if (fileExtension !== ".jpeg") return false;
+        }*/
+
+        return true;
+    }
+
+    checkPrice(field: number): boolean {
+        // empty price or price is not a number
+        if ( !field ) return false;
+
+        // price < 0
+        if (field < 0) return false;
+
+        return true;
+    }
+
+    checkSelect(field: string): boolean {
+        // empty select
+        if ( !field || field.length < 1 ) return false;
+
+        return true;
+    }
+
+
 }

@@ -40,23 +40,35 @@
     order: 3;
 }
 
-input {
+.label-name, .label-email {
     width: 49%;
+    position: relative;
+    padding: 8px 0;
+}
+
+input {
+    width: 100%;
     box-sizing: border-box;
 }
 
-input[type="text"] {
+.label-name {
     float: left;
 }
 
-input[type="email"] {
+.label-email {
     float: right;
+}
+
+.label-message {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 30px 0;
+    position: relative;
 }
 
 textarea {
     width: 100%;
     box-sizing: border-box;
-    margin: 30px 0;
 }
 
 h2, h4 {
@@ -79,6 +91,10 @@ p {
 .fa {
     padding-right: 10px;
     color: #00796B;
+}
+
+p.errorMessage-message {
+    bottom: -25%;
 }
 
 

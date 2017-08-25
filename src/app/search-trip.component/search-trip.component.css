@@ -44,6 +44,11 @@ label[for="trip-new-price-max"] {
     margin-left: 2%;
 }
 
+label {
+    position: relative;
+    padding: 10px 0;
+}
+
 .tp-sort-by {
     margin-top: 40px;
     margin-right: 50px;
@@ -51,6 +56,14 @@ label[for="trip-new-price-max"] {
 
 button {
     margin-top: 30px;
+}
+
+p.errorMessage {
+    bottom: auto;
+}
+
+p.errorMessage-select {
+    bottom: -15%;
 }
 
 

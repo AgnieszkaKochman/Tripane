@@ -11,3 +11,8 @@ input, textarea {
 textarea {
     resize: none;
 }
+
+label {
+    position: relative;
+    padding: 10px 0;
+}

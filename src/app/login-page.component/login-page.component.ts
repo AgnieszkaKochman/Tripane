@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit }      from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import { Routes, Router } from '@angular/router';
+import { Routes, Router }         from '@angular/router';
 
 import { CheckFormService } from '../check-form.service/check-form.service';
 
@@ -75,90 +75,98 @@ export class LoginPageComponent implements OnInit {
     }
   }
 
-  checkLoginPassword(form: FormGroup, field: string, fieldControl: boolean) {
-    if (!this.checkFormService.checkLoginPassword(form, field)) {
-      this.showErrorMessage(field, fieldControl);
+  checkString(form: FormGroup, field: string): boolean {
+    if (!this.checkFormService.checkString(form, field)) {
+      this.showErrorMessage(field);
+      return true;
     } else {
-      this.hideErrorMessage(field, fieldControl);
+      this.hideErrorMessage(field);
+      return false;
     }
   }
 
-  checkText(form: FormGroup, field: string, fieldControl: boolean) {
+  checkText(form: FormGroup, field: string): boolean {
     if ( !this.checkFormService.checkText(form.get(field).value) ) { 
-      this.showErrorMessage(field, fieldControl); 
+      this.showErrorMessage(field);
+      return true; 
     } else {
-      this.hideErrorMessage(field, fieldControl);
+      this.hideErrorMessage(field);
+      return false;
     }
   }
 
-  checkEmail(form: FormGroup, field: string, fieldControl: boolean) {
+  checkEmail(form: FormGroup, field: string): boolean {
     if ( !this.checkFormService.checkEmail(form, field) ) { 
-      this.showErrorMessage(field, fieldControl); 
+      this.showErrorMessage(field); 
+      return true;
     } else {
-      this.hideErrorMessage(field, fieldControl);
+      this.hideErrorMessage(field);
+      return false;
     }
   }
 
-  checkPassword(form: FormGroup, field1: string, field2: string, fieldControl: boolean) {
+  checkPassword(form: FormGroup, field1: string, field2: string): boolean {
     if ( !this.checkFormService.checkPassword(form, field1, field2) ) { 
-      this.showErrorMessage(field2, fieldControl);
+      this.showErrorMessage(field2);
+      return true;
     } else {
-      this.hideErrorMessage(field2, fieldControl);
+      this.hideErrorMessage(field2);
+      return false;
     }
   }
 
-  checkPhone(form: FormGroup, field: string, fieldControl: boolean) {
+  checkPhone(form: FormGroup, field: string): boolean {
     if ( !this.checkFormService.checkPhone(form, field) ) { 
-      this.showErrorMessage(field, fieldControl); 
+      this.showErrorMessage(field);
+      return true;
     } else {
-      this.hideErrorMessage(field, fieldControl);
+      this.hideErrorMessage(field);
+      return false;
     }
   }
 
-  showErrorMessage(field: string, fieldControl: boolean) {
-    fieldControl = true; 
+  showErrorMessage(field: string) {
     document.getElementById(field + '-error').style.display = "block";
   }
 
-  hideErrorMessage(field: string, fieldControl: boolean) {
-    fieldControl = false;
+  hideErrorMessage(field: string) {
     document.getElementById(field + '-error').style.display = "none";
   }
 
   
   checkLfLogin() {
-    this.checkLoginPassword(this.userLoginInfo, 'lfLogin', this.invalidLoginFormLogin);
+    this.invalidLoginFormLogin = this.checkString(this.userLoginInfo, 'lfLogin');
   }
 
   checkLfPassword() {
-    this.checkLoginPassword(this.userLoginInfo, 'lfPassword', this.invalidLoginFormPassword);
+    this.invalidLoginFormPassword = this.checkString(this.userLoginInfo, 'lfPassword');
   }
 
   checkRfName() {
-    this.checkText(this.userRegisterInfo, 'rfName', this.invalidRegisterFormName);
+    this.invalidRegisterFormName = this.checkText(this.userRegisterInfo, 'rfName');
   }
 
   checkRfSurname() {
-    this.checkText(this.userRegisterInfo, 'rfSurname', this.invalidRegisterFormSurname);
+    this.invalidRegisterFormSurname = this.checkText(this.userRegisterInfo, 'rfSurname');
   }
 
   checkRfEmail() {
-    this.checkEmail(this.userRegisterInfo, 'rfEmail', this.invalidRegisterFormEmail);
+    this.invalidRegisterFormEmail = this.checkEmail(this.userRegisterInfo, 'rfEmail');
   }
 
   checkRfLogin() {
-    this.checkLoginPassword(this.userRegisterInfo, 'rfLogin', this.invalidRegisterFormLogin);
+    this.invalidRegisterFormLogin = this.checkString(this.userRegisterInfo, 'rfLogin');
   }
 
   checkRfPassword() {
-    this.checkLoginPassword(this.userRegisterInfo, 'rfPassword', this.invalidRegisterFormPassword);
+    this.invalidRegisterFormPassword = this.checkString(this.userRegisterInfo, 'rfPassword');
   }
 
   checkRfConfirmPassword() {
-    this.checkPassword(this.userRegisterInfo, 'rfPassword', 'rfConfirmPassword', this.invalidRegisterFormConfirmPassword);
+    this.invalidRegisterFormConfirmPassword = this.checkPassword(this.userRegisterInfo, 'rfPassword', 'rfConfirmPassword');
   }
 
   checkRfPhone() {
-    this.checkPhone(this.userRegisterInfo, 'rfPhone', this.invalidRegisterFormPhone);
+    this.invalidRegisterFormPhone = this.checkPhone(this.userRegisterInfo, 'rfPhone');
   }
 }
